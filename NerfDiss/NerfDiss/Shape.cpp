@@ -7,6 +7,7 @@
 #include "Star.h"
 #include "Cross.h"
 #include "Sandglass.h"
+#include "Arrow.h"
 
 
 Shape* Shape::getShape(const std::string& name)
@@ -25,7 +26,8 @@ Shape* Shape::getShape(const std::string& name)
 		return new Cross;
 	else if (name == "Sandglass")
 		return new Sandglass;
-
+	else if (name == "Arrow")
+		return new Arrow;
 	return nullptr;
 }
 Shape::Shape() {

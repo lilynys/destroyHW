@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Arrow.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Cross.h" />
     <ClInclude Include="draw.h" />
