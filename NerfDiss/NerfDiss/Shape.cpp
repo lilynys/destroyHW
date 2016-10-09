@@ -2,14 +2,17 @@
 #include <vector>
 #include "Box.h"
 #include "Circle.h"
+#include "Triangle.h"
 
 
 Shape* Shape::getShape(const std::string& name)
 {
 	if (name == "Circle")
 		return new Circle;
-	if (name == "Box")
+	else if (name == "Box")
 		return new Box;
+	else if (name == "Triangle")
+		return new Triangle;
 
 	return nullptr;
 }

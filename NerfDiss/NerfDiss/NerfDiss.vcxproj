@@ -150,8 +150,11 @@
     <ClInclude Include="main.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Box.h" />
+    <ClInclude Include="Star.h" />
+    <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="main.cpp" />

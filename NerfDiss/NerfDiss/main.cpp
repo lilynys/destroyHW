@@ -2,6 +2,7 @@
 #include "Shape.h"
 #include "Circle.h"
 #include "draw.h"
+#include "Triangle.h"
 #include <vector>
 using namespace std;
 vector<Shape*> shape_list;
@@ -174,7 +175,7 @@ void drawOnPixelBuffer(double xpos, double ypos)
 	// drawing a line
 	shape_list.push_back(sh.getShape("Box"));
 	shape_list.push_back(sh.getShape("Circle"));
-	
+	shape_list.push_back(sh.getShape("Triangle"));
 		int tx = 110;
 		int ty = 130;
 		int size = 40;
