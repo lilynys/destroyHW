@@ -179,6 +179,7 @@ void drawOnPixelBuffer(double xpos, double ypos)
 	shape_list.push_back(sh.getShape("Triangle"));
 	shape_list.push_back(sh.getShape("Star"));
 	shape_list.push_back(sh.getShape("Trapezoid"));
+	shape_list.push_back(sh.getShape("Cross"));
 		int tx = 110;
 		int ty = 130;
 		int size = 40;

@@ -146,6 +146,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="Cross.h" />
     <ClInclude Include="draw.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Shape.h" />
@@ -155,6 +156,7 @@
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cross.cpp" />
     <ClCompile Include="Star.cpp" />
     <ClCompile Include="Trapezoid.cpp" />
     <ClCompile Include="Triangle.cpp" />
