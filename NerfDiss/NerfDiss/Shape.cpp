@@ -84,8 +84,9 @@ void Shape::setLineColor(const float& red, const float& green, const float& blue
 	this->green = green;
 }
 void Shape:: drawCircle(const int& xpos, const int& ypos) {
-	Shape* s = new Circle();
-
+	// problem 4
+	//Shape* s = new Circle();
+	Shape *s = new Box();
 	s->size = this->size + 20;
 	
 	s->x = this->x;

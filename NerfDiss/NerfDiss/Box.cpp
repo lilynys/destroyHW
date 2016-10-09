@@ -9,8 +9,13 @@ void Box::draw(){
 		int i_start = this->x - size;
 		int i_end = this->x + size;
 		for (int i = i_start; i <= i_end; i++) {
-			if (j == j_start || j == j_end || i == i_start || i == i_end)
-				drawPixel(i, j, 1.0f, 0.0f, 0.0f);
+			if (j == j_start || j == j_end || i == i_start || i == i_end) {
+				drawPixel(i, j, red, green, blue);
+				drawPixel(i-1, j, red, green, blue);
+				drawPixel(i+1, j, red, green, blue);
+				drawPixel(i, j-1, red, green, blue);
+				drawPixel(i, j+1, red, green, blue);
+			}
 		}
 	}
 }

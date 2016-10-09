@@ -1,10 +1,5 @@
 ﻿#include "main.h"
-#include "Shape.h"
-#include "Circle.h"
-#include "draw.h"
-#include "Triangle.h"
-#include "Snow.h"
-#include <vector>
+
 using namespace std;
 vector<Shape*> shape_list;
 void drawPixel(const int& i, const int& j, const float& red, const float&green, const float& blue)
