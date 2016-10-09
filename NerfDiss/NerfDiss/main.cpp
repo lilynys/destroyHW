@@ -3,6 +3,7 @@
 #include "Circle.h"
 #include "draw.h"
 #include "Triangle.h"
+#include "Trapezoid.h"
 #include <vector>
 using namespace std;
 vector<Shape*> shape_list;
@@ -176,6 +177,8 @@ void drawOnPixelBuffer(double xpos, double ypos)
 	shape_list.push_back(sh.getShape("Box"));
 	shape_list.push_back(sh.getShape("Circle"));
 	shape_list.push_back(sh.getShape("Triangle"));
+	shape_list.push_back(sh.getShape("Star"));
+	shape_list.push_back(sh.getShape("Trapezoid"));
 		int tx = 110;
 		int ty = 130;
 		int size = 40;

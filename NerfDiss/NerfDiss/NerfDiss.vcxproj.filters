@@ -36,6 +36,9 @@
     <ClInclude Include="Star.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Trapezoid.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -51,6 +54,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Triangle.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Star.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Trapezoid.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
