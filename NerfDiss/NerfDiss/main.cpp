@@ -184,22 +184,23 @@ void drawOnPixelBuffer(double xpos, double ypos)
 	shape_list.push_back(sh.getShape("Arrow"));
 	shape_list.push_back(sh.getShape("Plus"));
 	shape_list.push_back(sh.getShape("Rect"));
-		int tx = 110;
+		int tx = 100;
 		int ty = 130;
-		int size = 40;
-		for (auto itr : shape_list) {
-			itr->setPosition(tx, ty);
-			tx += 100;
-			ty += 10;
-			if (tx > 540) {
-				tx = 30;
-				ty += 50;
-			}
+		int size = 50;
+		for (int i = 0; i < 2; i++) {
+			for (auto itr : shape_list) {
+				itr->setPosition(tx, ty);
+				tx += 150;
+				if (tx > 700) {
+					tx = 100;
+					ty += 130;
+				}
 
-			itr->setSize(size);
-			size += 5;
-			itr->draw();
-			itr->drawCircle(xpos,ypos);
+				itr->setSize(size);
+
+				itr->draw();
+				itr->drawCircle(xpos, ypos);
+			}
 		}
 		shape_list.clear();
 
