@@ -3,7 +3,7 @@
 #include "Box.h"
 #include "Circle.h"
 #include "Triangle.h"
-#include "Trapezoid.h"
+#include "Snow.h"
 #include "Star.h"
 #include "Cross.h"
 #include "Sandglass.h"
@@ -22,8 +22,8 @@ Shape* Shape::getShape(const std::string& name)
 		return new Triangle;
 	else if (name == "Star")
 		return new Star;
-	else if (name == "Trapezoid")
-		return new Trapezoid;
+	else if (name == "Snow")
+		return new Snow;
 	else if (name == "Cross")
 		return new Cross;
 	else if (name == "Sandglass")

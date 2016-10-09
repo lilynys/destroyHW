@@ -11,7 +11,11 @@ void Circle:: draw(){
 
 			int x = (int)(this->x + rad * cos(angle));
 			int y = (int)(this->y + rad * sin(angle));
-			drawPixel(x, y, red, green, blue);
+			drawPixel(x + 0, y, red, green, blue);
+			drawPixel(x + 1, y, red, green, blue);
+			//drawPixel(x - 1, y, red, green, blue);
+			drawPixel(x, y + 1, red, green, blue);
+			//drawPixel(x, y - 1, red, green, blue);
 		}
 	}
 }

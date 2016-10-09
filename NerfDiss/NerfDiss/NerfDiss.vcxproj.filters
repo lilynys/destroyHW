@@ -18,9 +18,6 @@
     <ClInclude Include="main.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Shape.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Box.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
@@ -31,12 +28,6 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Star.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Trapezoid.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="Cross.h">
@@ -52,6 +43,15 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="Rect.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Snow.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Star.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -71,12 +71,6 @@
     <ClCompile Include="Triangle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Star.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Trapezoid.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Cross.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -90,6 +84,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Rect.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Snow.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Star.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

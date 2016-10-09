@@ -1,6 +1,6 @@
 #pragma once
 #include "Shape.h"
-class Trapezoid : public Shape {
+class Snow: public Shape {
 public:
 	void draw();
 };

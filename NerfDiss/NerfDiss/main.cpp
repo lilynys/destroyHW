@@ -3,7 +3,7 @@
 #include "Circle.h"
 #include "draw.h"
 #include "Triangle.h"
-#include "Trapezoid.h"
+#include "Snow.h"
 #include <vector>
 using namespace std;
 vector<Shape*> shape_list;
@@ -12,23 +12,13 @@ void drawPixel(const int& i, const int& j, const float& red, const float&green, 
 	pixels[(i + width* j) * 3 + 0] = red;
 	pixels[(i + width* j) * 3 + 1] = green;
 	pixels[(i + width* j) * 3 + 2] = blue;
+
 }
-
-
-/*
-void getMousePoint(GLFWwindow* window) {
-double xpose, ypose;
-glfwGetCursorPos(window, &xpos, &ypos);
-}
-*/
-// scratched from https://courses.engr.illinois.edu/ece390/archive/archive-f2000/mp/mp4/anti.html
-// see 'Rasterization' part.
-
 void drawLine(const int& i0, const int& j0, const int& i1, const int& j1, const float& red, const float& green, const float& blue)
 {
 	if (i1 - i0 == 0) {
 		for (int i = j0; i <= j1; i++) {
-			drawPixel(i0 + 0, i,red,green,blue);
+			drawPixel(i0 + 0, i, red, green, blue);
 			drawPixel(i0 + 1, i, red, green, blue);
 			drawPixel(i0 - 1, i, red, green, blue);
 			drawPixel(i0, i + 1, red, green, blue);
@@ -47,114 +37,6 @@ void drawLine(const int& i0, const int& j0, const int& i1, const int& j1, const 
 		drawPixel(i, j - 1, red, green, blue);
 	}
 
-}
-void drawThicknerLine(const int& thickness, const int& i0, const int& j0, const int& i1, const int& j1, const float& red, const float& green, const float& blue) {
-	/*
-	for (int i = i0; i <= i1; i++)
-	{
-	const int j = (j1 - j0)*(i - i0) / (i1 - i0) + j0;
-	for (int k = 0; k < thickness; k++) {
-	drawPixel(i + k, j, red, green, blue);
-	}
-	}
-	*/
-	for (int i = 0; i < thickness; i++)
-		drawLine(i0 + i, j0, i1 + i, j1, red, green, blue);
-}
-void drawSquare(int thickness, const int& i0, const int& j0, const int& i1, const int& j1, const float& red, const float& green, const float& blue) {
-	int i_center = (i0 + i1) / 2;
-	int j_center = (j0 + j1) / 2;
-
-	for (int j = j_center - thickness; j < j_center + thickness; j++) {
-		for (int i = i_center - thickness; i < i_center + thickness; i++) {
-			drawPixel(i, j, red, green, blue);
-		}
-	}
-}
-void drawPolygon() {
-	/*
-	//ø¿∞¢«¸
-	int i_center = 120;
-	int j_center = 130;
-	int size = 10;
-	int j_start = j_center - size;
-	int j_end = j_center + size;
-	for (int j = j_start; j <= j_end + size; j++) {
-	int i_start = i_center - size + (j / 5);
-	int i_end = i_center + size - (j / 5);
-	for (int i = i_start; i <= i_end; i++) {
-	//if(j == j_start || j == j_end || i == i_start || i == i_end)
-	drawPixel(i, j, 1.0f, 0.0f, 0.0f);
-	}
-	}
-	*/
-	drawLine(500, 200, 550, 200, 0.0f, 0.0f, 0.0f);
-	drawLine(480, 250, 525, 290, 0.0f, 0.0f, 0.0f);
-	drawLine(525, 290, 570, 250, 0.0f, 0.0f, 0.0f);
-
-	drawLine(480, 250, 500, 200, 0.0f, 0.0f, 0.0f);
-	drawLine(480, 251, 500, 201, 0.0f, 0.0f, 0.0f);
-
-	drawLine(550, 200, 570, 250, 0.0f, 0.0f, 0.0f);
-	drawLine(550, 201, 570, 251, 0.0f, 0.0f, 0.0f);
-}
-
-
-
-/*
-void drawTriangle( {
-int i_center = 100;
-int j_center = 100;
-int size = 70;
-int j_start = j_center - size;
-int j_end = j_center + size;
-for (int j = j_start; j <= j_end; j++) {
-int i_start = i_center - size + (j / 2);
-int i_end = i_center + size - (j / 2);
-for (int i = i_start; i <= i_end; i++) {
-if (j == j_start || j == j_end || i == i_start || i == i_end)
-drawPixel(i, j, 1.0f, 0.0f, 0.0f);
-}
-}
-}
-*/
-void drawEmptySquare(int size, const int& i0, const int& j0, const int& i1, const int& j1, const float& red, const float& green, const float& blue) {
-	int i_center = (i0 + i1) / 2;
-	int j_center = (j0 + j1) / 2;
-
-	for (int j = j_center - size; j <= j_center + size; j++) {
-		//for (int i = i_center - thickness; i < i_center + thickness; i++) {
-		for (int i = i_center - size; i <= i_center + size; i = i + size * 2)
-		{
-			drawPixel(i + 0, j, red, green, blue);
-			drawPixel(i + 1, j, red, green, blue);
-			drawPixel(i - 1, j, red, green, blue);
-			drawPixel(i, j + 1, red, green, blue);
-			drawPixel(i, j - 1, red, green, blue);
-		}
-
-	}
-	//for (int j = j_center - thickness; j < j_center + thickness; j++) {
-	for (int i = i_center - size; i <= i_center + size; i++) {
-		for (int j = j_center - size; j <= j_center + size; j = j + size * 2) {
-			drawPixel(i + 0, j, red, green, blue);
-			drawPixel(i + 1, j, red, green, blue);
-			drawPixel(i - 1, j, red, green, blue);
-			drawPixel(i, j + 1, red, green, blue);
-			drawPixel(i, j - 1, red, green, blue);
-		}
-	}
-}
-void heightLine(const int& i0, const int& j0, const int& i1, const int& j1, const float& red, const float& green, const float& blue) {
-	//for (int i = i0; i <= i1; i++)
-	//
-	for (int i = 0; i<50; i++)
-	{
-
-		drawPixel(i0, j0 - i, red, green, blue);
-		drawPixel(i0 - 1, j0 - i, red, green, blue);
-		drawPixel(i0 + 1, j0 - i, red, green, blue);
-	}
 }
 void drawOnPixelBuffer(double xpos, double ypos)
 {
@@ -178,7 +60,7 @@ void drawOnPixelBuffer(double xpos, double ypos)
 	shape_list.push_back(sh.getShape("Circle"));
 	shape_list.push_back(sh.getShape("Triangle"));
 	shape_list.push_back(sh.getShape("Star"));
-	shape_list.push_back(sh.getShape("Trapezoid"));
+	shape_list.push_back(sh.getShape("Snow"));
 	shape_list.push_back(sh.getShape("Cross"));
 	shape_list.push_back(sh.getShape("Sandglass"));
 	shape_list.push_back(sh.getShape("Arrow"));
@@ -248,7 +130,7 @@ int main(void)
 		/* Poll for and process events */
 		glfwPollEvents();
 
-		std::this_thread::sleep_for(std::chrono::milliseconds(100));
+		//std::this_thread::sleep_for(std::chrono::milliseconds(10));
 	}
 
 	glfwTerminate();
