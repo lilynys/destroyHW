@@ -6,6 +6,7 @@
 #include "Trapezoid.h"
 #include "Star.h"
 #include "Cross.h"
+#include "Sandglass.h"
 
 
 Shape* Shape::getShape(const std::string& name)
@@ -22,6 +23,8 @@ Shape* Shape::getShape(const std::string& name)
 		return new Trapezoid;
 	else if (name == "Cross")
 		return new Cross;
+	else if (name == "Sandglass")
+		return new Sandglass;
 
 	return nullptr;
 }

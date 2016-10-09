@@ -42,6 +42,9 @@
     <ClInclude Include="Cross.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Sandglass.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,6 +69,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Cross.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Sandglass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Arrow.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
