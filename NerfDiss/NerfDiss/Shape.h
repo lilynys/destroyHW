@@ -22,5 +22,5 @@ public:
 	void setSize(const int& size);
 	virtual void draw();
 	bool isInsideCircle(const double x, const double y, const double x_c, const double y_c, const double r);
-	void Shape::drawCircle();
+	void Shape::drawCircle(const int& xpos, const int& ypos);
 };

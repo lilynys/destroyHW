@@ -190,7 +190,7 @@ void drawOnPixelBuffer(double xpos, double ypos)
 			itr->setSize(size);
 			size += 5;
 			itr->draw();
-			itr->drawCircle();
+			itr->drawCircle(xpos,ypos);
 		}
 		shape_list.clear();
 

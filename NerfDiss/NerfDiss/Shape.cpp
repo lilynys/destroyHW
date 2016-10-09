@@ -54,22 +54,33 @@ void Shape::draw()
 }
 bool Shape::isInsideCircle(const double x, const double y, const double x_c, const double y_c, const double r)
 {
-	return false;
+	const double f = (x - x_c)*(x - x_c) + (y - y_c)*(y - y_c) - r*r;
+	if (f > 0.0) return false;
+	else {
+		return true;
+	}
 }
 void Shape::setLineColor(const float& red, const float& green, const float& blue) {
 	this->red = red;
 	this->blue = blue;
 	this->green = green;
 }
-void Shape:: drawCircle() {
+void Shape:: drawCircle(const int& xpos, const int& ypos) {
 	Shape* s = new Circle();
 
 	s->size = this->size + 5;
 	
 	s->x = this->x;
 	s->y = this->y;
-	s->green = 0.0f;
-	s->red = 1.0f;
-	s->blue = 0.0f;
+	if (isInsideCircle(xpos, 800 - ypos, s->x, s->y, s->size)) {
+		s->green = 0.0f;
+		s->red = 1.0f;
+		s->blue = 0.0f;
+	}
+	else {
+		s->green = 0.0f;
+		s->red = 0.0f;
+		s->blue = 1.0f;
+	}
 	s->draw();
 }
