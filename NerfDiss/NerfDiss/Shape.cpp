@@ -3,14 +3,15 @@
 #include "Box.h"
 #include "Circle.h"
 
-Shape* getShape(const std::string& name) {
+
+Shape* Shape::getShape(const std::string& name)
+{
+	if (name == "Circle")
+		return new Circle;
 	if (name == "Box")
 		return new Box;
-	else if (name == "Circle")
-		return new Circle;
-	else
-		return nullptr;
-	//TODO : error handling
+
+	return nullptr;
 }
 Shape::Shape() {
 	this->x = 20;
@@ -33,15 +34,9 @@ Shape::Shape(int x0, int y0, float red, float blue, float green, bool inside, in
 	this->inside = inside;
 
 }
-Shape * Shape::getShape(const std::string & name)
-{
-	if (name == "Circle")
-		return new Circle;
-	if (name == "Box")
-		return new Box;
 
-	return nullptr;
-}
+
+
 void Shape:: setPosition(const int& xpos, const int& ypos) {
 	this->x = xpos;
 	this->y = ypos;
