@@ -150,6 +150,8 @@
     <ClInclude Include="Cross.h" />
     <ClInclude Include="draw.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Plus.h" />
+    <ClInclude Include="Rect.h" />
     <ClInclude Include="Sandglass.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Box.h" />
@@ -160,6 +162,7 @@
   <ItemGroup>
     <ClCompile Include="Arrow.cpp" />
     <ClCompile Include="Cross.cpp" />
+    <ClCompile Include="Plus.cpp" />
     <ClCompile Include="Sandglass.cpp" />
     <ClCompile Include="Star.cpp" />
     <ClCompile Include="Trapezoid.cpp" />
@@ -168,6 +171,7 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Rect.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

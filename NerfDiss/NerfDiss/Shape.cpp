@@ -8,6 +8,8 @@
 #include "Cross.h"
 #include "Sandglass.h"
 #include "Arrow.h"
+#include "Plus.h"
+#include "Rect.h"
 
 
 Shape* Shape::getShape(const std::string& name)
@@ -28,6 +30,10 @@ Shape* Shape::getShape(const std::string& name)
 		return new Sandglass;
 	else if (name == "Arrow")
 		return new Arrow;
+	else if (name == "Plus")
+		return new Plus;
+	else if (name == "Rect")
+		return new Rect;
 	return nullptr;
 }
 Shape::Shape() {

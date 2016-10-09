@@ -182,6 +182,8 @@ void drawOnPixelBuffer(double xpos, double ypos)
 	shape_list.push_back(sh.getShape("Cross"));
 	shape_list.push_back(sh.getShape("Sandglass"));
 	shape_list.push_back(sh.getShape("Arrow"));
+	shape_list.push_back(sh.getShape("Plus"));
+	shape_list.push_back(sh.getShape("Rect"));
 		int tx = 110;
 		int ty = 130;
 		int size = 40;
