@@ -117,6 +117,7 @@ public:
 		}
 	}
 };
+std::vector<GeometricObjectInterface*> obj_list;
 void drawOnPixelBuffer(double xpos, double ypos)
 {
 	//std::memset(pixels, 1.0f, sizeof(float)*width*height * 3); // doesn't work
@@ -128,16 +129,15 @@ void drawOnPixelBuffer(double xpos, double ypos)
 		pixels[i * 3 + 1] = 1.0f; // green
 		pixels[i * 3 + 2] = 1.0f; // blue
 	}
-
-	const int i = rand() % width, j = rand() % height;
-	drawPixel(i, j, 0.0f, 0.0f, 0.0f);
 	//draw here
-	std::vector<GeometricObjectInterface*> obj_list;
-	//[TODO]
 	obj_list.push_back(new GeometricObject<Circle>);
 	obj_list.push_back(new GeometricObject<Box>);
+	//[TODO]
+	const int i = rand() % width, j = rand() % height;
+	drawPixel(i, j, 0.0f, 0.0f, 0.0f);
 	for (auto itr : obj_list)
 		itr->draw();
+	obj_list.clear();
 }
 int main(void)
 {
