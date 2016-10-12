@@ -14,8 +14,8 @@ public:
 int main() {
 	Vector2D<int> int_vector(1, 1);
 	int_vector.print();
-	Vector2D<float> float_vector(1.0f, 2.0f);
+	Vector2D<float> float_vector(1.3f, 2.1f);
 	float_vector.print();
-	Vector2D<double> double_vector(1.0, 1.0);
+	Vector2D<double> double_vector(1.2, 1.5);
 	double_vector.print();
 }
